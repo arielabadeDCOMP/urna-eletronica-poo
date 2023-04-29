@@ -11,6 +11,6 @@ package com.mycompany.urna.eletronica;
 public class UrnaEletronica {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        System.out.println("Oi!");
     }
 }
