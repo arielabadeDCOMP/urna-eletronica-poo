@@ -10,34 +10,31 @@ package com.mycompany.urna.eletronica;
  */
 public class Candidato {
 
-
-
-     String regiao;
-     String nome;
-     int numero;
-     
-    public String getRegiao() {
-        return regiao;
+    public Candidato(String nome, String CPF) {
+        this.nome = nome;
+        this.cpf = cpf;
     }
-
+     
+     String nome;
+     String cpf;
+     
+     
     public String getNome() {
         return nome;
     }
 
-    public int getNumero() {
-        return numero;
+    public String getcpf() {
+        return cpf;
     }
     
-        public void setRegiao(String regiao) {
-        this.regiao = regiao;
-    }
+
 
     public void setNome(String nome) {
         this.nome = nome;
     }
 
-    public void setNumero(int numero) {
-        this.numero = numero;
+    public void setcpf(String cpf) {
+        this.cpf = cpf;
     }
 
     /////////////////////////////////CAMDADA DE VALIDAÇÃO DE DADOS///////////////////////////////////////////////////////////////////
