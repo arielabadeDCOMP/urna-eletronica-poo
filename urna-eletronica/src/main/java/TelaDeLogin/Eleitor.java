@@ -2,8 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Other/File.java to edit this template
  */
-package com.mycompany.urna.eletronica;
+package TelaDeLogin;
 
+import com.mycompany.urna.eletronica.*;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -19,7 +20,7 @@ import java.util.logging.Logger;
 public class Eleitor {
 
     String nome;
-    int CPF; 
+    String CPF; 
     
     public String getNome() {
         return nome;
@@ -29,17 +30,17 @@ public class Eleitor {
         this.nome = nome;
     }
 
-    public int getCPF() {
+    public String getCPF() {
         return CPF;
     }
 
-    public void setCPF(int CPF) {
+    public void setCPF(String CPF) {
         this.CPF = CPF;
     }
   
     public String salvar()  {
         try{
-        FileWriter escreverNoArquivo = new FileWriter("eleitores.txt");
+        FileWriter escreverNoArquivo = new FileWriter("eleitores.txt", true);
         PrintWriter imprimirNoArquivo = new PrintWriter(escreverNoArquivo);
         imprimirNoArquivo.println("Nome: " + this.nome);
         imprimirNoArquivo.println("Nome: " + this.CPF);

@@ -3,7 +3,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package TelaDeLogin;
+//import package com.my.company.urna.eletronica
 
+import javax.swing.JOptionPane;
+
+
+//como consegugir fazer essass classes se comunicarem entre si?
 /**
  *
  * @author ARIEL
@@ -48,6 +53,11 @@ public class TelaDoEleitor extends javax.swing.JFrame {
             }
         });
 
+        try {
+            txtCPF.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.###.###-##")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
         txtCPF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtCPFActionPerformed(evt);
@@ -102,10 +112,13 @@ public class TelaDoEleitor extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
            // TODO add your handling code here:
            
-           String nome = txtNome.getText();
-           String cpf = txtCPF.getText();
-        
-       
+           Eleitor eleitor = new Eleitor();
+           eleitor.setNome(txtNome.getText());
+           eleitor.setCPF(txtCPF.getText());
+           
+           JOptionPane.showMessageDialog(null, eleitor.salvar());
+           txtNome.setText("");
+           txtCPF.setText("");
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
