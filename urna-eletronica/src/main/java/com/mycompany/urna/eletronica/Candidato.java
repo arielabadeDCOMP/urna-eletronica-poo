@@ -40,6 +40,7 @@ public class Candidato {
         this.numero = numero;
     }
 
+    /////////////////////////////////CAMDADA DE VALIDAÇÃO DE DADOS///////////////////////////////////////////////////////////////////
     /**
      * @param args the command line arguments
      */
