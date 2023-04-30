@@ -4,12 +4,33 @@
  */
 package com.mycompany.urna.eletronica;
 
+
+
 /**
  *
  * @author ARIEL
  */
 public class Eleitor {
 
+    String nome;
+    int CPF; 
+    
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public int getCPF() {
+        return CPF;
+    }
+
+    public void setCPF(int CPF) {
+        this.CPF = CPF;
+    }
+  
     /**
      * @param args the command line arguments
      */

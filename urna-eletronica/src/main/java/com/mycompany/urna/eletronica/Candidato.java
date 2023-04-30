@@ -10,6 +10,36 @@ package com.mycompany.urna.eletronica;
  */
 public class Candidato {
 
+
+
+     String regiao;
+     String nome;
+     int numero;
+     
+    public String getRegiao() {
+        return regiao;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public int getNumero() {
+        return numero;
+    }
+    
+        public void setRegiao(String regiao) {
+        this.regiao = regiao;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setNumero(int numero) {
+        this.numero = numero;
+    }
+
     /**
      * @param args the command line arguments
      */
