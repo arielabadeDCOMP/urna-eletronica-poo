@@ -52,7 +52,7 @@ public class TelaDeVotacao extends javax.swing.JFrame {
             }
         });
 
-        jToggleButton3.setText("3 - MEXERICA");
+        jToggleButton3.setText("3 - BERGAMOTA");
         jToggleButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jToggleButton3ActionPerformed(evt);

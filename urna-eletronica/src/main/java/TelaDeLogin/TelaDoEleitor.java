@@ -31,7 +31,7 @@ public class TelaDoEleitor extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
+        InsertVotationData = new javax.swing.JButton();
         txtNome = new javax.swing.JFormattedTextField();
         txtCPF = new javax.swing.JFormattedTextField();
         jLabel1 = new javax.swing.JLabel();
@@ -40,10 +40,10 @@ public class TelaDoEleitor extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Tela de Login");
 
-        jButton1.setText("Inserir Dados");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        InsertVotationData.setText("Inserir Dados");
+        InsertVotationData.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                InsertVotationDataActionPerformed(evt);
             }
         });
 
@@ -78,7 +78,7 @@ public class TelaDoEleitor extends javax.swing.JFrame {
                     .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1)
+                    .addComponent(InsertVotationData)
                     .addComponent(txtCPF, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(452, Short.MAX_VALUE))
         );
@@ -94,7 +94,7 @@ public class TelaDoEleitor extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(txtCPF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
-                .addComponent(jButton1)
+                .addComponent(InsertVotationData)
                 .addContainerGap(75, Short.MAX_VALUE))
         );
 
@@ -109,7 +109,7 @@ public class TelaDoEleitor extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNomeActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void InsertVotationDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InsertVotationDataActionPerformed
            // TODO add your handling code here:
            
            Eleitor eleitor = new Eleitor();
@@ -119,8 +119,27 @@ public class TelaDoEleitor extends javax.swing.JFrame {
            JOptionPane.showMessageDialog(null, eleitor.salvar());
            txtNome.setText("");
            txtCPF.setText("");
-    }//GEN-LAST:event_jButton1ActionPerformed
-
+           
+           /*  Eleitor eleitor = new Eleitor();
+           eleitor.setNome(txtNome.getText());
+           eleitor.setCPF(txtCPF.getText());
+           
+            if (eleitor.validarCPF()){
+                
+                //camada de validação
+           
+           JOptionPane.showMessageDialog(null, eleitor.salvar());
+           txtNome.setText("");
+           txtCPF.setText("");
+           
+           //camada de repetição
+           
+            } else {
+                
+            }
+           */
+    }//GEN-LAST:event_InsertVotationDataActionPerformed
+    
     /**
      * @param args the command line arguments
      */
@@ -156,9 +175,11 @@ public class TelaDoEleitor extends javax.swing.JFrame {
             }
         });
     }
+        
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton InsertVotationData;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JFormattedTextField txtCPF;
