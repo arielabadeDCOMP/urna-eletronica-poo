@@ -37,6 +37,11 @@ public class Eleitor {
     public void setCPF(String CPF) {
         this.CPF = CPF;
     }
+    
+    public void validarCPF() {
+        
+        
+    }
   
     public String salvar()  {
         try{
