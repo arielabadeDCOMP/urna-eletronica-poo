@@ -20,34 +20,25 @@ import java.util.logging.Logger;
 public abstract class Candidato {
 
 
-       protected String CPF;
-       protected char numero;
-
-    public Candidato(String CPF, char numero) {
-        this.CPF = CPF;
+       protected String nomeDoCandidato;
+       protected int numero;
+       
+         public Candidato(String nomeDoCandidato, int numero) {
+        this.nomeDoCandidato = nomeDoCandidato;
         this.numero = numero;
     }
-          public String getNome() {
-        return CPF;
-    }
 
-    public void setNome(String CPF) {
-        this.CPF = CPF;
-    }
+ 
 
-    public char getNumero() {
-        return numero;
-    }
+ 
 
-    public void setNumero(char numero) {
-        this.numero = numero;
-    }
+    
        
       public String salvarVotosEmCandidatos()  {
         try{
         FileWriter escreverNoArquivo = new FileWriter("votosEmCandidados.txt");
         PrintWriter imprimirNoArquivo = new PrintWriter(escreverNoArquivo);
-        imprimirNoArquivo.println("Nome do Candidato: " + this.CPF);
+        imprimirNoArquivo.println("Nome do Candidato: " + this.nomeDoCandidato);
         imprimirNoArquivo.println("Numero do candidato" + this.numero);
         escreverNoArquivo.flush();
         escreverNoArquivo.close();

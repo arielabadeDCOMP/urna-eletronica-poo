@@ -115,11 +115,21 @@ public class TelaDoEleitor extends javax.swing.JFrame {
            Eleitor eleitor = new Eleitor();
            eleitor.setNome(txtNome.getText());
            eleitor.setCPF(txtCPF.getText());
-           
-           JOptionPane.showMessageDialog(null, eleitor.salvar());
            txtNome.setText("");
            txtCPF.setText("");
+           eleitor.salvar();
+
+           /*
            
+           //validar o cpf
+           /*
+           */
+           if(!eleitor.validarCPF()) {
+               
+               JOptionPane.showMessageDialog(this, "Email ou senha incorretos");
+            
+               
+           } 
            /*  Eleitor eleitor = new Eleitor();
            eleitor.setNome(txtNome.getText());
            eleitor.setCPF(txtCPF.getText());
@@ -138,6 +148,9 @@ public class TelaDoEleitor extends javax.swing.JFrame {
                 
             }
            */
+            TelaDeVotacao votar = new TelaDeVotacao();
+            dispose();
+            votar.setVisible(true);
     }//GEN-LAST:event_InsertVotationDataActionPerformed
     
     /**

@@ -5,6 +5,11 @@
 package TelaDeLogin;
 
 import com.mycompany.urna.eletronica.*;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -12,12 +17,40 @@ import com.mycompany.urna.eletronica.*;
  */
 public class CandidatoTangerina extends Candidato {
 
-    public CandidatoTangerina(String nome, char numero) {
-        super(nome, numero);
+  
+ 
+    public CandidatoTangerina(String nomeDoCandidato, int numero) {
+        super(nomeDoCandidato, numero);
+    }
+
+    public String getNomeDoCandidato(String text) {
+        return nomeDoCandidato;
+    }
+
+    public int getNumero(String text) {
+        return numero;
     }
     
-    public void salvar() {
+    
+    
+      public String salvarVotosEmCandidatos()  {
+        try{
+        FileWriter escreverNoArquivo = new FileWriter("votos.txt");
+        PrintWriter imprimirNoArquivo = new PrintWriter(escreverNoArquivo);
+        imprimirNoArquivo.println("Nome Do Cannidato" + this.nomeDoCandidato);
+        imprimirNoArquivo.println("Voto: " + this.numero);
+        escreverNoArquivo.flush();
+        escreverNoArquivo.close();
+        imprimirNoArquivo.close();
         
+    } catch (IOException ex) {
+        Logger.getLogger(Eleitor.class.getName()).log(Level.SEVERE,null, ex);
     }
-    
+        return null;
+    }
 }
+
+        
+    
+    
+

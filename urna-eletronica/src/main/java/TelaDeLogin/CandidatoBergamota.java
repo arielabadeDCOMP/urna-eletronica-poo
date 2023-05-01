@@ -16,33 +16,27 @@ import java.util.logging.Logger;
  * @author ARIEL
  */
 public class CandidatoBergamota extends Candidato {
-    
-    public CandidatoBergamota(String CPF, char numero) {
-        super(CPF, numero);
+
+    public CandidatoBergamota(String nomeDoCandidato, int numero) {
+        super(nomeDoCandidato, numero);
     }
 
-    public String getNome() {
-        return CPF;
+    public String getNomeDoCandidato() {
+        return nomeDoCandidato;
     }
 
-    public void setNome(String CPF) {
-        this.CPF = CPF;
-    }
-
-    public char getNumero() {
+    public int getNumero() {
         return numero;
     }
-
-    public void setNumero(char numero) {
-        this.numero = numero;
-    }
+    
+    
     
       public String salvarVotosEmCandidatos()  {
         try{
         FileWriter escreverNoArquivo = new FileWriter("votos.txt");
         PrintWriter imprimirNoArquivo = new PrintWriter(escreverNoArquivo);
-        imprimirNoArquivo.println("CPF: " + this.CPF);
-        imprimirNoArquivo.println("Voto: " + this.CPF);
+        imprimirNoArquivo.println("Nome Do Canndidato" + this.nomeDoCandidato);
+        imprimirNoArquivo.println("Voto: " + this.numero);
         escreverNoArquivo.flush();
         escreverNoArquivo.close();
         imprimirNoArquivo.close();

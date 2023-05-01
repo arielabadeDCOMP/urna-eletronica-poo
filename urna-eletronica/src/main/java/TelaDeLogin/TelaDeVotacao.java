@@ -4,6 +4,10 @@
  */
 package TelaDeLogin;
 
+import java.io.FileWriter;
+import java.io.IOException;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author ARIEL
@@ -89,14 +93,23 @@ public class TelaDeVotacao extends javax.swing.JFrame {
     private void VotarMexericaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VotarMexericaActionPerformed
         // TODO add your handling code here:
         //CandidatoMexerica votarMexerica = new CandidatoMexerica();
+     
+        
     }//GEN-LAST:event_VotarMexericaActionPerformed
 
     private void VotarTangerinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VotarTangerinaActionPerformed
         // TODO add your handling code here:
+        CandidatoTangerina candidato1 = new CandidatoTangerina("Bergamota", 3);
+        candidato1.getNomeDoCandidato(VotarTangerina.getText());
+        candidato1.getNumero(VotarTangerina.getText());
+           
+           JOptionPane.showMessageDialog(null, candidato1.salvarVotosEmCandidatos());
+           
     }//GEN-LAST:event_VotarTangerinaActionPerformed
 
     private void VotarBergamotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VotarBergamotaActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_VotarBergamotaActionPerformed
 
     /**
