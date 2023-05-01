@@ -28,106 +28,76 @@ public class TelaDeVotacao extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jToggleButton1 = new javax.swing.JToggleButton();
-        jToggleButton2 = new javax.swing.JToggleButton();
-        jToggleButton3 = new javax.swing.JToggleButton();
+        VotarMexerica = new javax.swing.JToggleButton();
+        VotarTangerina = new javax.swing.JToggleButton();
+        VotarBergamota = new javax.swing.JToggleButton();
         jLabel3 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(null);
 
         jLabel1.setText("Qual o nome da fruta abaixo?");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(33, 76, 332, 30);
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(44, 145, 82, 28);
 
-        jToggleButton1.setText("2- MEXERICA");
-        jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
+        VotarMexerica.setText("2- MEXERICA");
+        VotarMexerica.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton1ActionPerformed(evt);
+                VotarMexericaActionPerformed(evt);
             }
         });
+        getContentPane().add(VotarMexerica);
+        VotarMexerica.setBounds(370, 220, 130, 50);
 
-        jToggleButton2.setText("1 - TANGERINA");
-        jToggleButton2.addActionListener(new java.awt.event.ActionListener() {
+        VotarTangerina.setText("1 - TANGERINA");
+        VotarTangerina.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton2ActionPerformed(evt);
+                VotarTangerinaActionPerformed(evt);
             }
         });
+        getContentPane().add(VotarTangerina);
+        VotarTangerina.setBounds(370, 150, 130, 50);
 
-        jToggleButton3.setText("3 - BERGAMOTA");
-        jToggleButton3.addActionListener(new java.awt.event.ActionListener() {
+        VotarBergamota.setText("3 - BERGAMOTA");
+        VotarBergamota.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton3ActionPerformed(evt);
+                VotarBergamotaActionPerformed(evt);
             }
         });
+        getContentPane().add(VotarBergamota);
+        VotarBergamota.setBounds(370, 290, 130, 50);
 
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Tela de Votação");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(66, 20, 332, 30);
 
-        jButton1.setText("VOTAR");
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jToggleButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jToggleButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jToggleButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(45, 45, 45))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(44, 44, 44)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(33, 33, 33)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 332, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(66, 66, 66)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 332, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(189, 189, 189)
-                        .addComponent(jButton1)))
-                .addContainerGap(72, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jToggleButton2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jToggleButton1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jToggleButton3)
-                        .addGap(43, 43, 43)
-                        .addComponent(jButton1)
-                        .addGap(26, 26, 26))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(39, 39, 39)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(127, Short.MAX_VALUE))))
-        );
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/kisspng-juice-tangerine-mandarin-orange-grapefruit-clement-tangerine-5ac096e4d811c1.938257371522570980885.jpg"))); // NOI18N
+        jLabel4.setText("jLabel4");
+        jLabel4.setMaximumSize(new java.awt.Dimension(300, 300));
+        jLabel4.setMinimumSize(new java.awt.Dimension(100, 100));
+        jLabel4.setPreferredSize(new java.awt.Dimension(400, 400));
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(30, 130, 260, 230);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
+    private void VotarMexericaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VotarMexericaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jToggleButton1ActionPerformed
+        //CandidatoMexerica votarMexerica = new CandidatoMexerica();
+    }//GEN-LAST:event_VotarMexericaActionPerformed
 
-    private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
+    private void VotarTangerinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VotarTangerinaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jToggleButton2ActionPerformed
+    }//GEN-LAST:event_VotarTangerinaActionPerformed
 
-    private void jToggleButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton3ActionPerformed
+    private void VotarBergamotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VotarBergamotaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jToggleButton3ActionPerformed
+    }//GEN-LAST:event_VotarBergamotaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -166,12 +136,12 @@ public class TelaDeVotacao extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JToggleButton VotarBergamota;
+    private javax.swing.JToggleButton VotarMexerica;
+    private javax.swing.JToggleButton VotarTangerina;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JToggleButton jToggleButton1;
-    private javax.swing.JToggleButton jToggleButton2;
-    private javax.swing.JToggleButton jToggleButton3;
+    private javax.swing.JLabel jLabel4;
     // End of variables declaration//GEN-END:variables
 }
