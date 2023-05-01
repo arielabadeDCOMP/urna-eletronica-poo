@@ -13,7 +13,7 @@ import javax.swing.JOptionPane;
  * @author ARIEL
  */
 public class TelaDeVotacao extends javax.swing.JFrame {
-aa
+
     /**
      * Creates new form TelaConfirmacao
      */
