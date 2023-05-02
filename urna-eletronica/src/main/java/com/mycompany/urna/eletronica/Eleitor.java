@@ -17,7 +17,7 @@ import java.util.logging.Logger;
 public class Eleitor {
 
     int CPF; 
-    String uf;
+    String nome;
     
     public String getNome() {
         return nome;
