@@ -16,8 +16,8 @@ import java.util.logging.Logger;
  */
 public class Eleitor {
 
-    String nome;
     int CPF; 
+    String uf;
     
     public String getNome() {
         return nome;
@@ -92,4 +92,5 @@ public class Eleitor {
     }
         return null;
     }
+    
 }
