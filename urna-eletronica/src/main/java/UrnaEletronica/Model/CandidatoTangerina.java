@@ -1,9 +1,10 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Other/File.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package TelaDeLogin;
+package UrnaEletronica.Model;
 
+import UrnaEletronica.Model.Eleitor;
 import com.mycompany.urna.eletronica.*;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -11,35 +12,34 @@ import java.io.PrintWriter;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-
-
 /**
  *
  * @author ARIEL
  */
-public abstract class Candidato {
+public class CandidatoTangerina extends Candidato {
 
-
-       protected String nomeDoCandidato;
-       protected int numero;
-       
-         public Candidato(String nomeDoCandidato, int numero) {
-        this.nomeDoCandidato = nomeDoCandidato;
-        this.numero = numero;
+  
+ 
+    public CandidatoTangerina(String nomeDoCandidato, int numero) {
+        super(nomeDoCandidato, numero);
     }
 
- 
+    public String getNomeDoCandidato(String text) {
+        return nomeDoCandidato;
+    }
 
- 
-
+    public int getNumero(String text) {
+        return numero;
+    }
     
-       
+    
+    
       public String salvarVotosEmCandidatos()  {
         try{
-        FileWriter escreverNoArquivo = new FileWriter("votosEmCandidados.txt");
+        FileWriter escreverNoArquivo = new FileWriter("votos.txt");
         PrintWriter imprimirNoArquivo = new PrintWriter(escreverNoArquivo);
-        imprimirNoArquivo.println("Nome do Candidato: " + this.nomeDoCandidato);
-        imprimirNoArquivo.println("Numero do candidato" + this.numero);
+        imprimirNoArquivo.println("Nome Do Cannidato" + this.nomeDoCandidato);
+        imprimirNoArquivo.println("Voto: " + this.numero);
         escreverNoArquivo.flush();
         escreverNoArquivo.close();
         imprimirNoArquivo.close();
@@ -49,7 +49,9 @@ public abstract class Candidato {
     }
         return null;
     }
-
-    
-   
 }
+
+        
+    
+    
+

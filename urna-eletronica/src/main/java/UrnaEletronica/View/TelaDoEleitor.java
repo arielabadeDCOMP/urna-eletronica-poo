@@ -2,9 +2,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package TelaDeLogin;
+package UrnaEletronica.View;
 //import package com.my.company.urna.eletronica
 
+import UrnaEletronica.View.TelaVotacao;
+import UrnaEletronica.Model.Eleitor;
 import javax.swing.JOptionPane;
 
 

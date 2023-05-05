@@ -2,8 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package TelaDeLogin;
+package UrnaEletronica.Model;
 
+import UrnaEletronica.Model.Eleitor;
 import com.mycompany.urna.eletronica.*;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -15,19 +16,17 @@ import java.util.logging.Logger;
  *
  * @author ARIEL
  */
-public class CandidatoTangerina extends Candidato {
+public class CandidatoBergamota extends Candidato {
 
-  
- 
-    public CandidatoTangerina(String nomeDoCandidato, int numero) {
+    public CandidatoBergamota(String nomeDoCandidato, int numero) {
         super(nomeDoCandidato, numero);
     }
 
-    public String getNomeDoCandidato(String text) {
+    public String getNomeDoCandidato() {
         return nomeDoCandidato;
     }
 
-    public int getNumero(String text) {
+    public int getNumero() {
         return numero;
     }
     
@@ -37,7 +36,7 @@ public class CandidatoTangerina extends Candidato {
         try{
         FileWriter escreverNoArquivo = new FileWriter("votos.txt");
         PrintWriter imprimirNoArquivo = new PrintWriter(escreverNoArquivo);
-        imprimirNoArquivo.println("Nome Do Cannidato" + this.nomeDoCandidato);
+        imprimirNoArquivo.println("Nome Do Canndidato" + this.nomeDoCandidato);
         imprimirNoArquivo.println("Voto: " + this.numero);
         escreverNoArquivo.flush();
         escreverNoArquivo.close();
@@ -49,8 +48,3 @@ public class CandidatoTangerina extends Candidato {
         return null;
     }
 }
-
-        
-    
-    
-
