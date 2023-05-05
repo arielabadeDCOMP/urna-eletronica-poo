@@ -5,7 +5,7 @@
 package UrnaEletronica.Model;
 
 import UrnaEletronica.Model.Eleitor;
-import com.mycompany.urna.eletronica.*;
+
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;

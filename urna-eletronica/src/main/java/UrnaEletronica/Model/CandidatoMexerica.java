@@ -4,7 +4,7 @@
  */
 package UrnaEletronica.Model;
 
-import com.mycompany.urna.eletronica.*;
+
 
 /**
  *

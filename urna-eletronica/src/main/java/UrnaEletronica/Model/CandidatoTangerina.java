@@ -5,7 +5,7 @@
 package UrnaEletronica.Model;
 
 import UrnaEletronica.Model.Eleitor;
-import com.mycompany.urna.eletronica.*;
+
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -38,7 +38,7 @@ public class CandidatoTangerina extends Candidato {
         try{
         FileWriter escreverNoArquivo = new FileWriter("votos.txt");
         PrintWriter imprimirNoArquivo = new PrintWriter(escreverNoArquivo);
-        imprimirNoArquivo.println("Nome Do Candidato" + this.nomeDoCandidato);
+        imprimirNoArquivo.println("Nome Do Cannidato" + this.nomeDoCandidato);
         imprimirNoArquivo.println("Voto: " + this.numero);
         escreverNoArquivo.flush();
         escreverNoArquivo.close();
