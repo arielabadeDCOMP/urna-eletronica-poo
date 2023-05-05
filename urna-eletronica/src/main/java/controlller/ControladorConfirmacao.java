@@ -8,7 +8,7 @@ package controlller;
  *
  * @author ARIEL
  */
-public class ControladorCandidato {
+public class ControladorConfirmacao {
 
     /**
      * @param args the command line arguments

@@ -16,6 +16,8 @@ import javax.swing.JOptionPane;
  * @author ARIEL
  */
 public class TelaDoEleitor extends javax.swing.JFrame {
+    
+    
 
     /**
      * Creates new form TelaPrincipal
@@ -102,7 +104,11 @@ public class TelaDoEleitor extends javax.swing.JFrame {
         eleitor.salvar();
         setVisible(false);
         TelaVotacao votar = new TelaVotacao();
-        votar.setVisible(true);
+        //new TelaVotacao(msg).setVisible(true);
+       // votar.setVisible(true);
+        
+        
+        
         
     
     } else {
@@ -111,6 +117,7 @@ public class TelaDoEleitor extends javax.swing.JFrame {
         
     }
     
+       
         
      
         
@@ -156,7 +163,9 @@ public class TelaDoEleitor extends javax.swing.JFrame {
         });
     }
         
-
+   
+    
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton InsertVotationData;

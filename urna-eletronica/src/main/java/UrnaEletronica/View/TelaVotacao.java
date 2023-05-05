@@ -18,6 +18,11 @@ public class TelaVotacao extends javax.swing.JFrame {
     public TelaVotacao() {
         initComponents();
     }
+    
+    public TelaVotacao(String CPF) {
+        initComponents();
+         //txtTangerina.setText(msg);
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -112,7 +117,7 @@ public class TelaVotacao extends javax.swing.JFrame {
                         .addComponent(txtTangerina, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(33, 33, 33)
                         .addComponent(txtBergamota1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addGap(42, 42, 42)
                         .addComponent(txtBergamota, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(188, 188, 188)
@@ -178,6 +183,12 @@ public class TelaVotacao extends javax.swing.JFrame {
             }
         });
     }
+    
+    public void receptor(String receptor) {
+        txtTangerina.setText(receptor);
+        
+    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JFrame jFrame1;
