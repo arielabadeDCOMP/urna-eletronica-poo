@@ -14,6 +14,7 @@ public class CandidatoMexerica extends Candidato {
     
     public CandidatoMexerica(String nome, char numero) {
         super(nome, numero);
+        
     }
     
 }

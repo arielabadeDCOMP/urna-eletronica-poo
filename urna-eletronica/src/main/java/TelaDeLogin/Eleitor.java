@@ -16,16 +16,10 @@ import java.util.logging.Logger;
  */
 public class Eleitor {
 
-    String nome;
+    
     String CPF; 
     
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
+   
 
     public String getCPF() {
         return CPF;
@@ -37,18 +31,13 @@ public class Eleitor {
     
     
     
-public boolean validarCPF() {
-    String cpf = this.CPF;
 
-    // verifica se o CPF tem 11 caracteres e contém apenas números
-    return cpf.matches("\\d{11}");
-}
 
     public String salvar()  {
         try{
-        FileWriter escreverNoArquivo = new FileWriter("eleitores.txt");
+        FileWriter escreverNoArquivo = new FileWriter("eleitores.txt",true);
         PrintWriter imprimirNoArquivo = new PrintWriter(escreverNoArquivo);
-        imprimirNoArquivo.println("Nome: " + this.nome);
+        
         imprimirNoArquivo.println("CPF: " + this.CPF);
         escreverNoArquivo.flush();
         escreverNoArquivo.close();

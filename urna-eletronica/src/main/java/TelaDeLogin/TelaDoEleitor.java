@@ -32,24 +32,16 @@ public class TelaDoEleitor extends javax.swing.JFrame {
     private void initComponents() {
 
         InsertVotationData = new javax.swing.JButton();
-        txtNome = new javax.swing.JFormattedTextField();
         txtCPF = new javax.swing.JFormattedTextField();
-        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Tela de Login");
 
-        InsertVotationData.setText("Inserir Dados");
+        InsertVotationData.setText("Inserir");
         InsertVotationData.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 InsertVotationDataActionPerformed(evt);
-            }
-        });
-
-        txtNome.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNomeActionPerformed(evt);
             }
         });
 
@@ -64,8 +56,6 @@ public class TelaDoEleitor extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setText("Nome:");
-
         jLabel2.setText("CPF:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -73,29 +63,23 @@ public class TelaDoEleitor extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(67, 67, 67)
+                .addGap(71, 71, 71)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(InsertVotationData)
                     .addComponent(txtCPF, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(452, Short.MAX_VALUE))
+                .addContainerGap(448, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(64, 64, 64)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(8, 8, 8)
+                .addGap(99, 99, 99)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(txtCPF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
                 .addComponent(InsertVotationData)
-                .addContainerGap(75, Short.MAX_VALUE))
+                .addContainerGap(98, Short.MAX_VALUE))
         );
 
         pack();
@@ -105,52 +89,33 @@ public class TelaDoEleitor extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtCPFActionPerformed
 
-    private void txtNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtNomeActionPerformed
-
     private void InsertVotationDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InsertVotationDataActionPerformed
            // TODO add your handling code here:
            
-           Eleitor eleitor = new Eleitor();
-           eleitor.setNome(txtNome.getText());
-           eleitor.setCPF(txtCPF.getText());
-           txtNome.setText("");
-           txtCPF.setText("");
-           eleitor.salvar();
-
-           /*
-           
-           //validar o cpf
-           /*
-           */
-           if(!eleitor.validarCPF()) {
-               
-               JOptionPane.showMessageDialog(this, "Email ou senha incorretos");
-            
-               
-           } 
-           /*  Eleitor eleitor = new Eleitor();
-           eleitor.setNome(txtNome.getText());
-           eleitor.setCPF(txtCPF.getText());
-           
-            if (eleitor.validarCPF()){
-                
-                //camada de validação
-           
-           JOptionPane.showMessageDialog(null, eleitor.salvar());
-           txtNome.setText("");
-           txtCPF.setText("");
-           
-           //camada de repetição
-           
-            } else {
-                
-            }
-           */
-            TelaDeVotacao votar = new TelaDeVotacao();
-            dispose();
-            votar.setVisible(true);
+        Eleitor eleitor = new Eleitor();
+        eleitor.setCPF(txtCPF.getText());
+        //int numeroInteiro = Integer.parseInt(eleitor.getCPF());
+        
+       if (eleitor.getCPF().matches("\\d{3}\\.\\d{3}\\.\\d{3}\\-\\d{2}")) {
+        eleitor.salvar();
+        setVisible(false);
+        TelaVotacao votar = new TelaVotacao();
+        votar.setVisible(true);
+        
+    
+    } else {
+        JOptionPane.showMessageDialog(null, "CPF Inválido");
+        txtCPF.requestFocus();
+        
+    }
+    
+        
+     
+        
+        
+     
+        
+   
     }//GEN-LAST:event_InsertVotationDataActionPerformed
     
     /**
@@ -193,9 +158,7 @@ public class TelaDoEleitor extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton InsertVotationData;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JFormattedTextField txtCPF;
-    private javax.swing.JFormattedTextField txtNome;
     // End of variables declaration//GEN-END:variables
 }
