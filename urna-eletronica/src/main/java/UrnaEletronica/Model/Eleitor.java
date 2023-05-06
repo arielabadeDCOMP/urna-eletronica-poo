@@ -17,7 +17,7 @@ import java.util.logging.Logger;
 public class Eleitor {
 
     
-    String CPF; 
+    protected String CPF; 
     
    
 
@@ -37,7 +37,6 @@ public class Eleitor {
         try{
         FileWriter escreverNoArquivo = new FileWriter("eleitores.txt",true);
         PrintWriter imprimirNoArquivo = new PrintWriter(escreverNoArquivo);
-        
         imprimirNoArquivo.println("CPF: " + this.CPF);
         escreverNoArquivo.flush();
         escreverNoArquivo.close();

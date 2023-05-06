@@ -20,26 +20,20 @@ public class CandidatoTangerina extends Candidato {
 
   
  
-    public CandidatoTangerina(String nomeDoCandidato, int numero) {
-        super(nomeDoCandidato, numero);
+    public CandidatoTangerina(String nomeDoCandidato) {
+        super(nomeDoCandidato);
     }
 
     public String getNomeDoCandidato(String text) {
         return nomeDoCandidato;
     }
 
-    public int getNumero(String text) {
-        return numero;
-    }
-    
-    
-    
+   
       public String salvarVotosEmCandidatos()  {
         try{
-        FileWriter escreverNoArquivo = new FileWriter("votos.txt");
+        FileWriter escreverNoArquivo = new FileWriter("votos.txt",true);
         PrintWriter imprimirNoArquivo = new PrintWriter(escreverNoArquivo);
-        imprimirNoArquivo.println("Nome Do Cannidato" + this.nomeDoCandidato);
-        imprimirNoArquivo.println("Voto: " + this.numero);
+        imprimirNoArquivo.println("Nome Do Candidato: " + this.nomeDoCandidato);
         escreverNoArquivo.flush();
         escreverNoArquivo.close();
         imprimirNoArquivo.close();

@@ -2,13 +2,15 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Other/File.java to edit this template
  */
-package controlller;
+package UrnaEletronica.controlller;
+
+import UrnaEletronica.Model.Eleitor;
 
 /**
  *
  * @author ARIEL
  */
-public class ControladorEleitor {
+public class ControladorEleitor extends Eleitor {
 
     /**
      * @param args the command line arguments
@@ -17,5 +19,6 @@ public class ControladorEleitor {
         // TODO code application logic here
         
         System.out.println("Controlller");
+        
     }
 }

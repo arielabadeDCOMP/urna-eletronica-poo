@@ -5,6 +5,7 @@
 package UrnaEletronica.Model;
 
 import UrnaEletronica.Model.Eleitor;
+import java.io.File;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -18,33 +19,29 @@ import java.util.logging.Logger;
  */
 public class CandidatoBergamota extends Candidato {
 
-    public CandidatoBergamota(String nomeDoCandidato, int numero) {
-        super(nomeDoCandidato, numero);
+    public CandidatoBergamota(String nomeDoCandidato) {
+        super(nomeDoCandidato);
     }
 
-    public String getNomeDoCandidato() {
+    public String getNomeDoCandidato(String text) {
         return nomeDoCandidato;
     }
 
-    public int getNumero() {
-        return numero;
-    }
     
     
     
-      public String salvarVotosEmCandidatos()  {
-        try{
-        FileWriter escreverNoArquivo = new FileWriter("votos.txt");
+   public String salvarVotosEmCandidatos()  {
+    try{
+        FileWriter escreverNoArquivo = new FileWriter("votos.txt", true);
         PrintWriter imprimirNoArquivo = new PrintWriter(escreverNoArquivo);
-        imprimirNoArquivo.println("Nome Do Canndidato" + this.nomeDoCandidato);
-        imprimirNoArquivo.println("Voto: " + this.numero);
+        imprimirNoArquivo.println("Nome Do Candidato: " + this.nomeDoCandidato);
         escreverNoArquivo.flush();
         escreverNoArquivo.close();
         imprimirNoArquivo.close();
-        
     } catch (IOException ex) {
-        Logger.getLogger(Eleitor.class.getName()).log(Level.SEVERE,null, ex);
+        Logger.getLogger(Eleitor.class.getName()).log(Level.SEVERE, null, ex);
     }
-        return null;
-    }
+    return null;
+}
+   
 }

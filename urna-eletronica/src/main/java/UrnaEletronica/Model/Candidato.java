@@ -22,25 +22,22 @@ public abstract class Candidato {
 
 
        protected String nomeDoCandidato;
-       protected int numero;
+      
        
-         public Candidato(String nomeDoCandidato, int numero) {
+         public Candidato(String nomeDoCandidato) {
         this.nomeDoCandidato = nomeDoCandidato;
-        this.numero = numero;
+        
     }
 
  
 
- 
 
-    
        
       public String salvarVotosEmCandidatos()  {
         try{
         FileWriter escreverNoArquivo = new FileWriter("votosEmCandidados.txt");
         PrintWriter imprimirNoArquivo = new PrintWriter(escreverNoArquivo);
         imprimirNoArquivo.println("Nome do Candidato: " + this.nomeDoCandidato);
-        imprimirNoArquivo.println("Numero do candidato" + this.numero);
         escreverNoArquivo.flush();
         escreverNoArquivo.close();
         imprimirNoArquivo.close();

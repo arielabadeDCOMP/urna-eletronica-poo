@@ -10,7 +10,6 @@ import UrnaEletronica.Model.Eleitor;
 import javax.swing.JOptionPane;
 
 
-//como consegugir fazer essass classes se comunicarem entre si?
 /**
  *
  * @author ARIEL
@@ -99,13 +98,14 @@ public class TelaDoEleitor extends javax.swing.JFrame {
         Eleitor eleitor = new Eleitor();
         eleitor.setCPF(txtCPF.getText());
         //int numeroInteiro = Integer.parseInt(eleitor.getCPF());
-        
        if (eleitor.getCPF().matches("\\d{3}\\.\\d{3}\\.\\d{3}\\-\\d{2}")) {
         eleitor.salvar();
         setVisible(false);
         TelaVotacao votar = new TelaVotacao();
-        //new TelaVotacao(msg).setVisible(true);
-       // votar.setVisible(true);
+        //votar.receberDados(txtCPF.getText());
+        votar.setVisible(true);
+        
+       
         
         
         
@@ -168,8 +168,8 @@ public class TelaDoEleitor extends javax.swing.JFrame {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton InsertVotationData;
+    public javax.swing.JButton InsertVotationData;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JFormattedTextField txtCPF;
+    public javax.swing.JFormattedTextField txtCPF;
     // End of variables declaration//GEN-END:variables
 }
