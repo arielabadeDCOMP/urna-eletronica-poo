@@ -107,10 +107,15 @@ public class TelaVotacao extends javax.swing.JFrame {
 
     private void txtTangerinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTangerinaActionPerformed
         // TODO add your handling code here:
+        
        CandidatoTangerina candidato1 = new CandidatoTangerina("Tangerina");
       // candidato1.getNomeDoCandidato(txtTangerina.getText());
        candidato1.getNomeDoCandidato(txtTangerina.getText());
        candidato1.salvarVotosEmCandidatos();
+       TelaConfirmacao confirmacao = new TelaConfirmacao();
+       confirmacao.jTextField2.setText(txtTangerina.getText());
+       setVisible(false);
+       confirmacao.setVisible(true);
        
        
        
@@ -180,8 +185,8 @@ public class TelaVotacao extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JFrame jFrame1;
     private javax.swing.JLabel nomeDaFruta;
-    private javax.swing.JButton txtBergamota;
-    private javax.swing.JButton txtMexerica;
-    private javax.swing.JButton txtTangerina;
+    public javax.swing.JButton txtBergamota;
+    public javax.swing.JButton txtMexerica;
+    public javax.swing.JButton txtTangerina;
     // End of variables declaration//GEN-END:variables
 }
