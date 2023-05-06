@@ -6,6 +6,8 @@ package UrnaEletronica.View;
 
 import UrnaEletronica.Model.CandidatoBergamota;
 import UrnaEletronica.Model.CandidatoTangerina;
+//port Imagens.*;
+
 
 /**
  *
@@ -35,6 +37,7 @@ public class TelaVotacao extends javax.swing.JFrame {
         txtTangerina = new javax.swing.JButton();
         nomeDaFruta = new javax.swing.JLabel();
         txtMexerica = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
         jFrame1.getContentPane().setLayout(jFrame1Layout);
@@ -72,34 +75,44 @@ public class TelaVotacao extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UrnaEletronica/View/tangerinapadrao.jpg.jpg"))); // NOI18N
+        jLabel1.setText("jLabel1");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(45, 437, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtBergamota, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtMexerica, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtTangerina, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(139, 139, 139))
             .addGroup(layout.createSequentialGroup()
                 .addGap(33, 33, 33)
-                .addComponent(nomeDaFruta, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 143, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtBergamota, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtMexerica, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtTangerina, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(139, 139, 139))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(nomeDaFruta, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(51, 51, 51)
+                .addGap(128, 128, 128)
                 .addComponent(nomeDaFruta)
-                .addGap(145, 145, 145)
-                .addComponent(txtTangerina, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33)
-                .addComponent(txtMexerica, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(42, 42, 42)
-                .addComponent(txtBergamota, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(82, Short.MAX_VALUE))
+                .addGap(45, 45, 45)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(9, 9, 9)
+                        .addComponent(txtTangerina, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(130, 130, 130)
+                        .addComponent(txtBergamota, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel1)
+                        .addComponent(txtMexerica, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(106, Short.MAX_VALUE))
         );
 
         pack();
@@ -184,6 +197,7 @@ public class TelaVotacao extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JFrame jFrame1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel nomeDaFruta;
     public javax.swing.JButton txtBergamota;
     public javax.swing.JButton txtMexerica;
