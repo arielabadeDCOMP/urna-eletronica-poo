@@ -100,10 +100,14 @@ public class TelaDoEleitor extends javax.swing.JFrame {
         //int numeroInteiro = Integer.parseInt(eleitor.getCPF());
        if (eleitor.getCPF().matches("\\d{3}\\.\\d{3}\\.\\d{3}\\-\\d{2}")) {
         eleitor.salvar();
+        //eleitor.listarCPFs();
         setVisible(false);
         TelaVotacao votar = new TelaVotacao();
+       // TelaConfirmacao confirmacao = new TelaConfirmacao();
+        //confirmacao.jTextField1.setText(txtCPF.getText());
         //votar.receberDados(txtCPF.getText());
         votar.setVisible(true);
+        
         
        
         

@@ -9,13 +9,16 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class Eleitor {
 
-    protected String CPF;
-    protected String hashCPF;
+    private String CPF;
+    public String hashCPF;
+    private static Set<String> cpfSet = new HashSet<>();
 
     public String getCPF() {
         return CPF;
@@ -49,7 +52,10 @@ public class Eleitor {
         return hexString.toString();
     }
 
-    public String salvar() {
+    public void salvar() {
+        // Adiciona o CPF ao conjunto
+        cpfSet.add(this.CPF);
+        
         try {
             FileWriter escreverNoArquivo = new FileWriter("eleitores.txt", true);
             PrintWriter imprimirNoArquivo = new PrintWriter(escreverNoArquivo);
@@ -61,7 +67,16 @@ public class Eleitor {
         } catch (IOException ex) {
             Logger.getLogger(Eleitor.class.getName()).log(Level.SEVERE, null, ex);
         }
-        return null;
     }
-
+    
+    // Método para obter a quantidade de CPFs únicos salvos no conjunto
+    public static int getQuantidadeCPFsUnicos() {
+        return cpfSet.size();
+    }
+    
+    public static void listarCPFs() {
+    for (String cpf : cpfSet) {
+        System.out.println(cpf);
+    }
+}
 }
