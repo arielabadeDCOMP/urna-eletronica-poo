@@ -6,6 +6,8 @@ package UrnaEletronica.Model;
 
 
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -14,6 +16,7 @@ import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Scanner;
 import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -108,4 +111,21 @@ public class Eleitor {
     public static List<String> getHashesCPF() {
         return cpfList;
     }
+    
+    public static void carregarListaCPFs() {
+    try {
+        File arquivo = new File("eleitores.txt");
+        Scanner leitor = new Scanner(arquivo);
+        while (leitor.hasNextLine()) {
+            String linha = leitor.nextLine();
+            if (linha.startsWith("CPF: ")) {
+                String hashCPF = linha.substring(5);
+                cpfList.add(hashCPF);
+            }
+        }
+        leitor.close();
+    } catch (FileNotFoundException ex) {
+        Logger.getLogger(Eleitor.class.getName()).log(Level.SEVERE, null, ex);
+    }
+}
 }
