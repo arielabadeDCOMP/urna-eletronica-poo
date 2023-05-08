@@ -44,17 +44,17 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+              <Component id="nomeDaFruta" min="-2" pref="225" max="-2" attributes="0"/>
+              <EmptySpace pref="479" max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="nomeDaFruta" min="-2" pref="225" max="-2" attributes="0"/>
-                  <Component id="imagemTangerina" min="-2" pref="252" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="txtTangerina" min="-2" pref="169" max="-2" attributes="0"/>
-                  <Component id="txtMexerica" min="-2" pref="169" max="-2" attributes="0"/>
                   <Component id="txtBergamota" min="-2" pref="169" max="-2" attributes="0"/>
+                  <Component id="txtMexerica" min="-2" pref="169" max="-2" attributes="0"/>
+                  <Component id="txtTangerina" min="-2" pref="169" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="31" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="81" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -63,22 +63,13 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="128" max="-2" attributes="0"/>
               <Component id="nomeDaFruta" min="-2" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Component id="txtTangerina" min="-2" pref="43" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="txtMexerica" min="-2" pref="43" max="-2" attributes="0"/>
-                      <EmptySpace min="52" pref="52" max="-2" attributes="0"/>
-                      <Component id="txtBergamota" min="-2" pref="43" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-                      <Component id="imagemTangerina" min="-2" pref="250" max="-2" attributes="0"/>
-                      <EmptySpace pref="119" max="32767" attributes="0"/>
-                  </Group>
-              </Group>
+              <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+              <Component id="txtTangerina" min="-2" pref="43" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+              <Component id="txtMexerica" min="-2" pref="43" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
+              <Component id="txtBergamota" min="-2" pref="43" max="-2" attributes="0"/>
+              <EmptySpace pref="148" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -86,7 +77,7 @@
   <SubComponents>
     <Component class="javax.swing.JButton" name="txtBergamota">
       <Properties>
-        <Property name="text" type="java.lang.String" value="3 - BERGAMOTA"/>
+        <Property name="text" type="java.lang.String" value="BERGAMOTA"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtBergamotaActionPerformed"/>
@@ -97,7 +88,7 @@
     </Component>
     <Component class="javax.swing.JButton" name="txtTangerina">
       <Properties>
-        <Property name="text" type="java.lang.String" value="1 - TANGERINA"/>
+        <Property name="text" type="java.lang.String" value="TANGERINA"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtTangerinaActionPerformed"/>
@@ -113,7 +104,7 @@
     </Component>
     <Component class="javax.swing.JButton" name="txtMexerica">
       <Properties>
-        <Property name="text" type="java.lang.String" value="2 - MEXERICA"/>
+        <Property name="text" type="java.lang.String" value="MEXERICA"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtMexericaActionPerformed"/>
@@ -121,17 +112,6 @@
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
       </AuxValues>
-    </Component>
-    <Component class="javax.swing.JLabel" name="imagemTangerina">
-      <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/UrnaEletronica/View/tangerinapadrao.jpg.jpg"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="jLabel1"/>
-      </Properties>
-      <Events>
-        <EventHandler event="ancestorAdded" listener="javax.swing.event.AncestorListener" parameters="javax.swing.event.AncestorEvent" handler="imagemTangerinaAncestorAdded"/>
-      </Events>
     </Component>
   </SubComponents>
 </Form>

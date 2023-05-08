@@ -4,12 +4,16 @@
  */
 package UrnaEletronica.Model;
 
+
+
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -19,7 +23,8 @@ public class Eleitor {
     private String CPF;
     public String hashCPF;
     private static Set<String> cpfSet = new HashSet<>();
-
+    private static List<String> cpfList = new ArrayList<>(); // criar a lista vazia
+    
     public String getCPF() {
         return CPF;
     }
@@ -53,11 +58,30 @@ public class Eleitor {
     }
 
     public void salvar() {
-        // Adiciona o CPF ao conjunto
+        // Adiciona o CPF ao conjunto e à lista
         cpfSet.add(this.CPF);
+        cpfList.add(this.hashCPF); // adicionar à lista
         
         try {
             FileWriter escreverNoArquivo = new FileWriter("eleitores.txt", true);
+            PrintWriter imprimirNoArquivo = new PrintWriter(escreverNoArquivo);
+            imprimirNoArquivo.println("CPF: " + this.hashCPF);
+            escreverNoArquivo.flush();
+            escreverNoArquivo.close();
+            imprimirNoArquivo.close();
+
+        } catch (IOException ex) {
+            Logger.getLogger(Eleitor.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+    public void salvarVotosCandidatos() {
+        // Adiciona o CPF ao conjunto e à lista
+        cpfSet.add(this.CPF);
+        cpfList.add(this.hashCPF); // adicionar à lista
+        
+        try {
+            FileWriter escreverNoArquivo = new FileWriter("votos.txt", true);
             PrintWriter imprimirNoArquivo = new PrintWriter(escreverNoArquivo);
             imprimirNoArquivo.println("CPF: " + this.hashCPF);
             escreverNoArquivo.flush();
@@ -75,8 +99,13 @@ public class Eleitor {
     }
     
     public static void listarCPFs() {
-    for (String cpf : cpfSet) {
-        System.out.println(cpf);
+        for (String cpf : cpfSet) {
+            System.out.println(cpf);
+        }
     }
-}
+    
+    // Método para obter a lista de todos os hashes de CPFs salvos
+    public static List<String> getHashesCPF() {
+        return cpfList;
+    }
 }
