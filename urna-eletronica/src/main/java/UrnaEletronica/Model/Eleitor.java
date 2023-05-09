@@ -1,10 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Other/File.java to edit this template
- */
 package UrnaEletronica.Model;
-
-
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -23,30 +17,30 @@ import java.util.logging.Logger;
 
 public class Eleitor {
 
-    public String CPF;
-    public String hashCPF;
+    private String CPF;
+    private String hashCPF;
     private static Set<String> cpfSet = new HashSet<>();
-    private static List<String> cpfList = new ArrayList<>(); // criar a lista vazia
+    private static List<String> cpfList = new ArrayList<>();
     
     public String getCPF() {
         return CPF;
     }
     
-     private String generateHash(String text) throws NoSuchAlgorithmException {
+    private String generateHash(String text) throws NoSuchAlgorithmException {
         MessageDigest digest = MessageDigest.getInstance("SHA-256");
         byte[] hashBytes = digest.digest(text.getBytes());
         StringBuilder hexString = new StringBuilder();
 
         for (byte b : hashBytes) {
             String hex = Integer.toHexString(0xff & b);
-            if (hex.length() == 1)
+            if (hex.length() == 1) {
                 hexString.append('0');
+            }
             hexString.append(hex);
         }
 
         return hexString.toString();
     }
-
 
     public void setCPF(String CPF) {
         this.CPF = CPF;
@@ -61,62 +55,53 @@ public class Eleitor {
         return hashCPF;
     }
 
-   
     public void salvar() {
-    // Adiciona o CPF ao conjunto e à lista
-    cpfSet.add(this.CPF);
-    cpfList.add(this.hashCPF); // adicionar à lista
-    
-    try {
-        FileWriter escreverNoArquivo = new FileWriter("eleitores.txt", true);
-        PrintWriter imprimirNoArquivo = new PrintWriter(escreverNoArquivo);
-        imprimirNoArquivo.println("CPF: " + this.CPF + "    " + "Hash do CPF: " + this.hashCPF);
-        escreverNoArquivo.flush();
-        escreverNoArquivo.close();
-        imprimirNoArquivo.close();
-
-    } catch (IOException ex) {
-        Logger.getLogger(Eleitor.class.getName()).log(Level.SEVERE, null, ex);
+        cpfSet.add(this.CPF);
+        cpfList.add(this.hashCPF);
+        
+        try {
+            FileWriter escreverNoArquivo = new FileWriter("eleitores.txt", true);
+            PrintWriter imprimirNoArquivo = new PrintWriter(escreverNoArquivo);
+            imprimirNoArquivo.println("CPF: " + this.CPF + "    " + "Hash do CPF: " + this.hashCPF);
+            escreverNoArquivo.flush();
+            escreverNoArquivo.close();
+            imprimirNoArquivo.close();
+        } catch (IOException ex) {
+            Logger.getLogger(Eleitor.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
-}
-  
-    // Método para obter a quantidade de CPFs únicos salvos no conjunto
+
     public static int getQuantidadeCPFsUnicos() {
         return cpfSet.size();
     }
-    
+
     public static void listarCPFs() {
         for (String cpf : cpfSet) {
             System.out.println(cpf);
         }
     }
-    
- 
-    // Método para obter a lista de todos os hashes de CPFs salvos
+
     public static List<String> getHashesCPF() {
         return cpfList;
     }
-    
-   public static void carregarListaCPFs() {
-    try {
-        File arquivo = new File("eleitores.txt");
-        Scanner leitor = new Scanner(arquivo);
-        while (leitor.hasNextLine()) {
-            String linha = leitor.nextLine();
-            if (linha.startsWith("CPF: ")) {
-                String cpf = linha.substring(5, 16); // extrai o CPF da linha
-                String hashCPF = linha.substring(25); // extrai o hashCPF da linha
-                cpfSet.add(cpf);
-                cpfList.add(hashCPF);
+
+    public static void carregarListaCPFs() {
+        try {
+            File arquivo = new File("eleitores.txt");
+            Scanner leitor = new Scanner(arquivo);
+            while (leitor.hasNextLine()) {
+                String linha = leitor.nextLine();
+                if (linha.startsWith("CPF: ")) {
+                    String cpf = linha.substring(5, 16);
+                    String hashCPF = linha.substring(25);
+                    cpfSet.add(cpf);
+                    cpfList.add(hashCPF);
+                }
             }
+            leitor.close();
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(Eleitor.class.getName()).log(Level.SEVERE, null, ex);
         }
-        leitor.close();
-    } catch (FileNotFoundException ex) {
-        Logger.getLogger(Eleitor.class.getName()).log(Level.SEVERE, null, ex);
     }
-}
-   
-   
-}
 
-
+}
