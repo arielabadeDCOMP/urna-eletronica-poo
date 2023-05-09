@@ -71,7 +71,7 @@ public class TelaVotacao extends javax.swing.JFrame {
 
         nomeDaFruta.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         nomeDaFruta.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        nomeDaFruta.setText("Qual o nome você tem mais costume de usar?");
+        nomeDaFruta.setText("Qual o nomenclatura você usa com mais frequência?");
         nomeDaFruta.setToolTipText("");
 
         txtMexerica.setText("MEXERICA");

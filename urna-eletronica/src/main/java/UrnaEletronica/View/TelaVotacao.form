@@ -142,7 +142,7 @@
           <Font name="Segoe UI" size="24" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="Qual o nome voc&#xea; tem mais costume de usar?"/>
+        <Property name="text" type="java.lang.String" value="Qual o nomenclatura voc&#xea; usa com mais frequ&#xea;ncia?"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
     </Component>
