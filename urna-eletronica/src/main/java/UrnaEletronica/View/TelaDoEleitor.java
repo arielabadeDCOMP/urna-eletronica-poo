@@ -97,37 +97,21 @@ public class TelaDoEleitor extends javax.swing.JFrame {
            
         Eleitor eleitor = new Eleitor();
         eleitor.setCPF(txtCPF.getText());
-        //int numeroInteiro = Integer.parseInt(eleitor.getCPF());
+        //Teste de validação de CPF
        if (eleitor.getCPF().matches("\\d{3}\\.\\d{3}\\.\\d{3}\\-\\d{2}")) {
         eleitor.salvar();
-        //eleitor.listarCPFs();
+        eleitor.getQuantidadeCPFsUnicos();
+        eleitor. carregarListaCPFs();
         setVisible(false);
         TelaVotacao votar = new TelaVotacao();
-       // TelaConfirmacao confirmacao = new TelaConfirmacao();
-        //confirmacao.jTextField1.setText(txtCPF.getText());
-        //votar.receberDados(txtCPF.getText());
         votar.setVisible(true);
-        
-        
-       
-        
-        
-        
-        
-    
+      
     } else {
         JOptionPane.showMessageDialog(null, "CPF Inválido");
         txtCPF.requestFocus();
         
     }
     
-       
-        
-     
-        
-        
-     
-        
    
     }//GEN-LAST:event_InsertVotationDataActionPerformed
     

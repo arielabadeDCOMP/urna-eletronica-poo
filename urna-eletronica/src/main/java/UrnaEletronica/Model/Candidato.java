@@ -9,6 +9,8 @@ import UrnaEletronica.Model.Eleitor;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -29,10 +31,8 @@ public abstract class Candidato {
         
     }
 
- 
 
-
-       
+    
       public String salvarVotosEmCandidatos()  {
         try{
         FileWriter escreverNoArquivo = new FileWriter("votosEmCandidados.txt");
@@ -47,7 +47,26 @@ public abstract class Candidato {
     }
         return null;
     }
+      
+      
+      public String gerarHashDosVotos () {
+          return " ";
+       
+}
 
-    
+     protected String generateHash(String text) throws NoSuchAlgorithmException {
+        MessageDigest digest = MessageDigest.getInstance("SHA-256");
+        byte[] hashBytes = digest.digest(text.getBytes());
+        StringBuilder hexString = new StringBuilder();
+
+        for (byte b : hashBytes) {
+            String hex = Integer.toHexString(0xff & b);
+            if (hex.length() == 1)
+                hexString.append('0');
+            hexString.append(hex);
+        }
+
+        return hexString.toString();
+    }
    
 }

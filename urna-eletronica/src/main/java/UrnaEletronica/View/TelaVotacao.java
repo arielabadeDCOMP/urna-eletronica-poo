@@ -126,7 +126,7 @@ public class TelaVotacao extends javax.swing.JFrame {
         
        CandidatoTangerina candidato1 = new CandidatoTangerina("Tangerina");
       // candidato1.getNomeDoCandidato(txtTangerina.getText());
-       candidato1.getNomeDoCandidato(txtTangerina.getText());
+       candidato1.getHashNomeDoCandidato(txtTangerina.getText());
        candidato1.salvarVotosEmCandidatos();
        TelaConfirmacao confirmacao = new TelaConfirmacao();
        confirmacao.jTextField2.setText(txtTangerina.getText());
@@ -144,7 +144,7 @@ public class TelaVotacao extends javax.swing.JFrame {
         
        CandidatoTangerina candidato2 = new CandidatoTangerina("Mexerica");
       // candidato1.getNomeDoCandidato(txtTangerina.getText());
-       candidato2.getNomeDoCandidato(txtMexerica.getText());
+       candidato2.getHashNomeDoCandidato(txtMexerica.getText());
        candidato2.salvarVotosEmCandidatos();
         
        
