@@ -28,7 +28,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jLabel1" min="-2" pref="197" max="-2" attributes="0"/>
                   <Component id="jLabel4" min="-2" pref="166" max="-2" attributes="0"/>
-                  <Component id="jTextField2" alignment="0" min="-2" pref="126" max="-2" attributes="0"/>
+                  <Component id="txtConfirmacao" alignment="0" min="-2" pref="126" max="-2" attributes="0"/>
                   <Component id="jButton1" alignment="0" min="-2" pref="126" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="514" max="32767" attributes="0"/>
@@ -43,7 +43,7 @@
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jTextField2" min="-2" pref="28" max="-2" attributes="0"/>
+              <Component id="txtConfirmacao" min="-2" pref="28" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="jButton1" min="-2" max="-2" attributes="0"/>
               <EmptySpace pref="62" max="32767" attributes="0"/>
@@ -63,9 +63,9 @@
         <Property name="text" type="java.lang.String" value="Candidato Votado:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField2">
+    <Component class="javax.swing.JTextField" name="txtConfirmacao">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField2ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtConfirmacaoActionPerformed"/>
       </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>

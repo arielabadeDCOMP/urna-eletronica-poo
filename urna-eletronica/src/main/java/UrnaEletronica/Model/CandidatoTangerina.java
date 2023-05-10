@@ -1,5 +1,6 @@
 package UrnaEletronica.Model;
 
+
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -15,6 +16,8 @@ public class CandidatoTangerina extends Candidato {
 
     private List<String> votos = new ArrayList<>();
     private String hashnomeDoCandidato;
+    private static List<String> candidatos = new ArrayList<>();
+    private static List<String> hashCandidatos = new ArrayList<>();
 
     public CandidatoTangerina(String nomeDoCandidato) {
         super(nomeDoCandidato);
@@ -24,8 +27,6 @@ public class CandidatoTangerina extends Candidato {
             Logger.getLogger(CandidatoTangerina.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    
-  
 
     protected String generateHash(String text) throws NoSuchAlgorithmException {
         MessageDigest digest = MessageDigest.getInstance("SHA-256");
@@ -52,10 +53,14 @@ public class CandidatoTangerina extends Candidato {
 
     public String salvarVotosEmCandidatos() {
         try {
+            
+            // Salvar o candidato e o hash nas listas separadas
+            candidatos.add(this.nomeDoCandidato);
+            hashCandidatos.add(this.hashnomeDoCandidato);
             FileWriter escreverNoArquivo = new FileWriter("votos.txt", true);
             PrintWriter imprimirNoArquivo = new PrintWriter(escreverNoArquivo);
 
-            imprimirNoArquivo.println("CPF: " + this.nomeDoCandidato + "    " + "Hash do CPF: " + this.hashnomeDoCandidato);
+            imprimirNoArquivo.println("Candidato " + this.nomeDoCandidato + "    " + "Hash do Voto Do Candidato " + this.hashnomeDoCandidato);
 
             for (String voto : votos) {
                 imprimirNoArquivo.println(voto);
@@ -64,9 +69,23 @@ public class CandidatoTangerina extends Candidato {
             escreverNoArquivo.flush();
             escreverNoArquivo.close();
             imprimirNoArquivo.close();
+            
+            
         } catch (IOException ex) {
             Logger.getLogger(CandidatoTangerina.class.getName()).log(Level.SEVERE, null, ex);
         }
         return null;
+    }
+    
+    public static List<String> getCandidatos() {
+        return candidatos;
+    }
+    
+    public static List<String> getHashCandidatos() {
+        return hashCandidatos;
+    }
+    
+    public static int getNumeroDeCandidatos() {
+        return candidatos.size();
     }
 }

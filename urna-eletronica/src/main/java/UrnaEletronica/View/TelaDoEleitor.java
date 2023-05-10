@@ -93,25 +93,26 @@ public class TelaDoEleitor extends javax.swing.JFrame {
     }//GEN-LAST:event_txtCPFActionPerformed
 
     private void InsertVotationDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InsertVotationDataActionPerformed
-           // TODO add your handling code here:
-           
-        Eleitor eleitor = new Eleitor();
-        eleitor.setCPF(txtCPF.getText());
-        //Teste de validação de CPF
-       if (eleitor.getCPF().matches("\\d{3}\\.\\d{3}\\.\\d{3}\\-\\d{2}")) {
-        eleitor.salvar();
-        eleitor.getQuantidadeCPFsUnicos();
-        eleitor. carregarListaCPFs();
-        setVisible(false);
-        TelaVotacao votar = new TelaVotacao();
-        votar.setVisible(true);
-      
-    } else {
+             Eleitor eleitor = new Eleitor();
+    eleitor.setCPF(txtCPF.getText());
+
+    if (!eleitor.getCPF().matches("\\d{3}\\.\\d{3}\\.\\d{3}\\-\\d{2}")) {
         JOptionPane.showMessageDialog(null, "CPF Inválido");
         txtCPF.requestFocus();
-        
+        return;
     }
-    
+
+    if (Eleitor.cpfJaInserido(eleitor.getCPF())) {
+        JOptionPane.showMessageDialog(null, "Você já votou e não pode votar novamente.");
+        txtCPF.requestFocus();
+        return;
+    }
+
+    eleitor.salvar();
+    eleitor.getQuantidadeCPFsUnicos();
+    setVisible(false);
+    TelaVotacao votar = new TelaVotacao();
+    votar.setVisible(true);
    
     }//GEN-LAST:event_InsertVotationDataActionPerformed
     

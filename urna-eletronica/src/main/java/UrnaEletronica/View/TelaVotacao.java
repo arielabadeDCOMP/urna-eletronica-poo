@@ -129,7 +129,7 @@ public class TelaVotacao extends javax.swing.JFrame {
        candidato1.getHashNomeDoCandidato(txtTangerina.getText());
        candidato1.salvarVotosEmCandidatos();
        TelaConfirmacao confirmacao = new TelaConfirmacao();
-       confirmacao.jTextField2.setText(txtTangerina.getText());
+       confirmacao.txtConfirmacao.setText(txtTangerina.getText());
        //confirmacao.jTextField1.setText(txtCPF.getText());
        setVisible(false);
        confirmacao.setVisible(true);
@@ -143,10 +143,15 @@ public class TelaVotacao extends javax.swing.JFrame {
         // TODO add your handling code here:
         
        CandidatoTangerina candidato2 = new CandidatoTangerina("Mexerica");
-      // candidato1.getNomeDoCandidato(txtTangerina.getText());
+          // candidato1.getNomeDoCandidato(txtTangerina.getText());
        candidato2.getHashNomeDoCandidato(txtMexerica.getText());
        candidato2.salvarVotosEmCandidatos();
-        
+       TelaConfirmacao confirmacao = new TelaConfirmacao();
+       confirmacao.txtConfirmacao.setText(txtMexerica.getText());
+       //confirmacao.jTextField1.setText(txtCPF.getText());
+       setVisible(false);
+       confirmacao.setVisible(true);
+      
        
        
     }//GEN-LAST:event_txtMexericaActionPerformed
@@ -154,9 +159,13 @@ public class TelaVotacao extends javax.swing.JFrame {
     private void txtBergamotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBergamotaActionPerformed
         // TODO add your handling code here:
          CandidatoBergamota candidato3 = new CandidatoBergamota("Bergamota");
-      // candidato1.getNomeDoCandidato(txtTangerina.getText());
-       candidato3.getNomeDoCandidato(txtBergamota.getText());
-       candidato3.salvarVotosEmCandidatos();
+       candidato3.getHashNomeCandidatoBergamota(txtBergamota.getText());
+       candidato3.salvarVotosEmCandidatosBergamota();
+       TelaConfirmacao confirmacao = new TelaConfirmacao();
+       confirmacao.txtConfirmacao.setText(txtBergamota.getText());
+       //confirmacao.jTextField1.setText(txtCPF.getText());
+       setVisible(false);
+       confirmacao.setVisible(true);
     }//GEN-LAST:event_txtBergamotaActionPerformed
 
     /**

@@ -56,8 +56,8 @@ public class Eleitor {
     }
 
     public void salvar() {
-        cpfSet.add(this.CPF);
-        cpfList.add(this.hashCPF);
+        cpfSet.add(this.CPF); //primeiro o cpf é armazenado como Set, então não corre risco de se repetir
+        cpfList.add(this.hashCPF); //ele só passa pro hash se for armazenado como set primeiro, então,não tem problema usar uma list aqui
         
         try {
             FileWriter escreverNoArquivo = new FileWriter("eleitores.txt", true);
@@ -85,23 +85,10 @@ public class Eleitor {
         return cpfList;
     }
 
-    public static void carregarListaCPFs() {
-        try {
-            File arquivo = new File("eleitores.txt");
-            Scanner leitor = new Scanner(arquivo);
-            while (leitor.hasNextLine()) {
-                String linha = leitor.nextLine();
-                if (linha.startsWith("CPF: ")) {
-                    String cpf = linha.substring(5, 16);
-                    String hashCPF = linha.substring(25);
-                    cpfSet.add(cpf);
-                    cpfList.add(hashCPF);
-                }
-            }
-            leitor.close();
-        } catch (FileNotFoundException ex) {
-            Logger.getLogger(Eleitor.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
+    
+    
+    public static boolean cpfJaInserido(String cpf) {
+    return cpfSet.contains(cpf);
+}
 
 }
