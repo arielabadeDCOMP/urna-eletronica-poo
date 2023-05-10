@@ -26,17 +26,17 @@ public class TelaConfirmacao extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        txtTitleConfirmacao = new javax.swing.JLabel();
+        txtCandidatoVotado = new javax.swing.JLabel();
         txtConfirmacao = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        txtProximoVoto = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("CONFIRMAÇÃO DE VOTO");
+        txtTitleConfirmacao.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        txtTitleConfirmacao.setText("CONFIRMAÇÃO DE VOTO");
 
-        jLabel4.setText("Candidato Votado:");
+        txtCandidatoVotado.setText("Candidato Votado:");
 
         txtConfirmacao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -44,10 +44,10 @@ public class TelaConfirmacao extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setText("Próximo Voto");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        txtProximoVoto.setText("Próximo Voto");
+        txtProximoVoto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                txtProximoVotoActionPerformed(evt);
             }
         });
 
@@ -58,23 +58,23 @@ public class TelaConfirmacao extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(41, 41, 41)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtTitleConfirmacao, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtCandidatoVotado, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtConfirmacao, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtProximoVoto, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(514, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(53, 53, 53)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtTitleConfirmacao, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel4)
+                .addComponent(txtCandidatoVotado)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtConfirmacao, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton1)
+                .addComponent(txtProximoVoto)
                 .addContainerGap(62, Short.MAX_VALUE))
         );
 
@@ -85,12 +85,12 @@ public class TelaConfirmacao extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtConfirmacaoActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void txtProximoVotoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtProximoVotoActionPerformed
         // TODO add your handling code here:
         setVisible(false);
         TelaDoEleitor novoVoto = new TelaDoEleitor();
         novoVoto.setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_txtProximoVotoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -131,9 +131,9 @@ public class TelaConfirmacao extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel txtCandidatoVotado;
     public javax.swing.JTextField txtConfirmacao;
+    private javax.swing.JButton txtProximoVoto;
+    private javax.swing.JLabel txtTitleConfirmacao;
     // End of variables declaration//GEN-END:variables
 }

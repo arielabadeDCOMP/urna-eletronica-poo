@@ -57,7 +57,8 @@ public class CandidatoMexerica extends Candidato {
             FileWriter escreverNoArquivo = new FileWriter("votos.txt", true);
             PrintWriter imprimirNoArquivo = new PrintWriter(escreverNoArquivo);
 
-            imprimirNoArquivo.println("Candidato: " + this.nomeDoCandidato + "Hash do Voto Do Candidato " + this.hashNomeCandidatoMexerica);
+            imprimirNoArquivo.println("Voto: " + this.nomeDoCandidato + "Hash Voto: " + this.hashNomeCandidatoMexerica);
+           
             
 
             for (String voto : votosMexerica) {

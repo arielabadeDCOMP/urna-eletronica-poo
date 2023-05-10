@@ -60,7 +60,7 @@ public class CandidatoTangerina extends Candidato {
             FileWriter escreverNoArquivo = new FileWriter("votos.txt", true);
             PrintWriter imprimirNoArquivo = new PrintWriter(escreverNoArquivo);
 
-            imprimirNoArquivo.println("Candidato " + this.nomeDoCandidato + "    " + "Hash do Voto Do Candidato " + this.hashnomeDoCandidato);
+            imprimirNoArquivo.println("Voto: " + this.nomeDoCandidato + "    " + "Hash Voto: " + this.hashnomeDoCandidato);
 
             for (String voto : votos) {
                 imprimirNoArquivo.println(voto);
