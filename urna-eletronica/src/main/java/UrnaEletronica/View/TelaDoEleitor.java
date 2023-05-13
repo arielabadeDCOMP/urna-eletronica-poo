@@ -112,6 +112,7 @@ public class TelaDoEleitor extends javax.swing.JFrame {
     eleitor.getQuantidadeCPFsUnicos();
     setVisible(false);
     TelaVotacao votar = new TelaVotacao();
+    votar.confirmacaoVotoTelaVotacao.setText(txtCPF.getText());
     votar.setVisible(true);
    
     }//GEN-LAST:event_InsertVotationDataActionPerformed

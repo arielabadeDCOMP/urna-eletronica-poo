@@ -23,7 +23,7 @@ import java.util.logging.Logger;
 public abstract class Candidato {
 
 
-       protected String nomeDoCandidato;
+       public String nomeDoCandidato;
       
        
          public Candidato(String nomeDoCandidato) {

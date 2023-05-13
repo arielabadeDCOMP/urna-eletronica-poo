@@ -4,8 +4,11 @@
  */
 package UrnaEletronica.View;
 
+import UrnaEletronica.Controller.ControllerCandidato;
 import UrnaEletronica.Model.CandidatoBergamota;
 import UrnaEletronica.Model.CandidatoTangerina;
+import UrnaEletronica.Model.Eleitor;
+
 //port Imagens.*;
 
 
@@ -39,6 +42,8 @@ public class TelaVotacao extends javax.swing.JFrame {
         txtTangerina = new javax.swing.JButton();
         nomeDaFruta = new javax.swing.JLabel();
         txtMexerica = new javax.swing.JButton();
+        confirmacaoVotoTelaVotacao = new java.awt.Label();
+        jLabel1 = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
         jFrame1.getContentPane().setLayout(jFrame1Layout);
@@ -81,6 +86,10 @@ public class TelaVotacao extends javax.swing.JFrame {
             }
         });
 
+        confirmacaoVotoTelaVotacao.setText("label1");
+
+        jLabel1.setText("CPF do Eleitor:");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -102,11 +111,21 @@ public class TelaVotacao extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(confirmacaoVotoTelaVotacao, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(122, Short.MAX_VALUE)
+                .addGap(19, 19, 19)
+                .addComponent(jLabel1)
+                .addGap(2, 2, 2)
+                .addComponent(confirmacaoVotoTelaVotacao, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
                 .addComponent(nomeDaFruta, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(44, 44, 44)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -129,7 +148,12 @@ public class TelaVotacao extends javax.swing.JFrame {
        candidato1.getHashNomeDoCandidato(txtTangerina.getText());
        candidato1.salvarVotosEmCandidatos();
        TelaConfirmacao confirmacao = new TelaConfirmacao();
-       confirmacao.txtConfirmacao.setText(txtTangerina.getText());
+       confirmacao.confirmacaoCPF.setText(confirmacaoVotoTelaVotacao.getText());
+       confirmacao.confirmacaoVoto.setText(txtTangerina.getText());
+       ControllerCandidato salvamento = new ControllerCandidato();
+       confirmacao.confirmacaoCPF.setText(confirmacaoVotoTelaVotacao.getText());
+       salvamento.votar(confirmacao.confirmacaoCPF, confirmacao.confirmacaoVoto);
+       
        //confirmacao.jTextField1.setText(txtCPF.getText());
        setVisible(false);
        confirmacao.setVisible(true);
@@ -147,7 +171,8 @@ public class TelaVotacao extends javax.swing.JFrame {
        candidato2.getHashNomeDoCandidato(txtMexerica.getText());
        candidato2.salvarVotosEmCandidatos();
        TelaConfirmacao confirmacao = new TelaConfirmacao();
-       confirmacao.txtConfirmacao.setText(txtMexerica.getText());
+       confirmacao.confirmacaoVoto.setText(txtMexerica.getText());
+       confirmacao.confirmacaoCPF.setText(confirmacaoVotoTelaVotacao.getText());
        //confirmacao.jTextField1.setText(txtCPF.getText());
        setVisible(false);
        confirmacao.setVisible(true);
@@ -162,7 +187,8 @@ public class TelaVotacao extends javax.swing.JFrame {
        candidato3.getHashNomeCandidatoBergamota(txtBergamota.getText());
        candidato3.salvarVotosEmCandidatosBergamota();
        TelaConfirmacao confirmacao = new TelaConfirmacao();
-       confirmacao.txtConfirmacao.setText(txtBergamota.getText());
+       confirmacao.confirmacaoVoto.setText(txtBergamota.getText());
+       confirmacao.confirmacaoCPF.setText(confirmacaoVotoTelaVotacao.getText());
        //confirmacao.jTextField1.setText(txtCPF.getText());
        setVisible(false);
        confirmacao.setVisible(true);
@@ -210,8 +236,10 @@ public class TelaVotacao extends javax.swing.JFrame {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public java.awt.Label confirmacaoVotoTelaVotacao;
     private javax.swing.JFileChooser jFileChooser1;
     private javax.swing.JFrame jFrame1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel nomeDaFruta;
     public javax.swing.JButton txtBergamota;
