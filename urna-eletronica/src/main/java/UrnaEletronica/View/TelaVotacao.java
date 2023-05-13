@@ -153,8 +153,6 @@ public class TelaVotacao extends javax.swing.JFrame {
        ControllerCandidato salvamento = new ControllerCandidato();
        confirmacao.confirmacaoCPF.setText(confirmacaoVotoTelaVotacao.getText());
        salvamento.votar(confirmacao.confirmacaoCPF, confirmacao.confirmacaoVoto);
-       
-       //confirmacao.jTextField1.setText(txtCPF.getText());
        setVisible(false);
        confirmacao.setVisible(true);
        
@@ -173,7 +171,9 @@ public class TelaVotacao extends javax.swing.JFrame {
        TelaConfirmacao confirmacao = new TelaConfirmacao();
        confirmacao.confirmacaoVoto.setText(txtMexerica.getText());
        confirmacao.confirmacaoCPF.setText(confirmacaoVotoTelaVotacao.getText());
-       //confirmacao.jTextField1.setText(txtCPF.getText());
+       ControllerCandidato salvamento = new ControllerCandidato();
+       confirmacao.confirmacaoCPF.setText(confirmacaoVotoTelaVotacao.getText());
+       salvamento.votar(confirmacao.confirmacaoCPF, confirmacao.confirmacaoVoto);
        setVisible(false);
        confirmacao.setVisible(true);
       
@@ -183,13 +183,15 @@ public class TelaVotacao extends javax.swing.JFrame {
 
     private void txtBergamotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBergamotaActionPerformed
         // TODO add your handling code here:
-         CandidatoBergamota candidato3 = new CandidatoBergamota("Bergamota");
+       CandidatoBergamota candidato3 = new CandidatoBergamota("Bergamota");
        candidato3.getHashNomeCandidatoBergamota(txtBergamota.getText());
        candidato3.salvarVotosEmCandidatosBergamota();
        TelaConfirmacao confirmacao = new TelaConfirmacao();
        confirmacao.confirmacaoVoto.setText(txtBergamota.getText());
        confirmacao.confirmacaoCPF.setText(confirmacaoVotoTelaVotacao.getText());
-       //confirmacao.jTextField1.setText(txtCPF.getText());
+       confirmacao.confirmacaoCPF.setText(confirmacaoVotoTelaVotacao.getText());
+       ControllerCandidato salvamento = new ControllerCandidato();
+       salvamento.votar(confirmacao.confirmacaoCPF, confirmacao.confirmacaoVoto);
        setVisible(false);
        confirmacao.setVisible(true);
     }//GEN-LAST:event_txtBergamotaActionPerformed

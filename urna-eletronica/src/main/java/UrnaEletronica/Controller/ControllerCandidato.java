@@ -3,7 +3,6 @@ package UrnaEletronica.Controller;
 import UrnaEletronica.Model.CandidatoTangerina;
 import UrnaEletronica.Model.Eleitor;
 import java.awt.Label;
-
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
