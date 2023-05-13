@@ -13,15 +13,15 @@ import java.util.logging.Logger;
 
 public class ControllerCandidato {
 
-    private String candidatoum;
-    private String candidato;
+    private String cpf;
+    private String voto;
     
    // String um;
     
-  public void votar(Label candidatoum, Label candidato) {
-    String cpf = candidatoum.getText();
-    String voto = candidato.getText();
-    String frase = "CPF " + cpf + " Voto: " + voto;
+  public void votar(Label cpf, Label voto) {
+    String cpfEleitor = cpf.getText();
+    String votoVotacao = voto.getText();
+    String frase = "CPF do Eleitor: " + cpfEleitor + " Voto: " + votoVotacao;
     String hash = generateHash(frase);
 
     salvarVotoNoArquivo(frase, hash);
@@ -50,7 +50,7 @@ public class ControllerCandidato {
             FileWriter escreverNoArquivo = new FileWriter("teste.txt", true);
             PrintWriter imprimirNoArquivo = new PrintWriter(escreverNoArquivo);
 
-            imprimirNoArquivo.println("Frase: " + frase + " Hash: " + hash);
+            imprimirNoArquivo.println(frase + " Hash: " + hash);
             imprimirNoArquivo.println();
             escreverNoArquivo.flush();
             escreverNoArquivo.close();
