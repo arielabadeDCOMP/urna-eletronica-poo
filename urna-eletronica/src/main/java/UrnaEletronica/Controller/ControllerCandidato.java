@@ -47,7 +47,7 @@ public class ControllerCandidato {
 
     public void salvarVotoNoArquivo(String frase, String hash) {
         try {
-            FileWriter escreverNoArquivo = new FileWriter("teste.txt", true);
+            FileWriter escreverNoArquivo = new FileWriter("votosCompletosComHash.txt", true);
             PrintWriter imprimirNoArquivo = new PrintWriter(escreverNoArquivo);
 
             imprimirNoArquivo.println(frase + " Hash: " + hash);

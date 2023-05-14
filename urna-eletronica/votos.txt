@@ -38,3 +38,6 @@ Voto: Tangerina  Hash Voto: f2b99001730c538a33c4b009da0b98af3ba3d3e2d8d7051b0ad6
 Voto: Tangerina  Hash Voto: f2b99001730c538a33c4b009da0b98af3ba3d3e2d8d7051b0ad6d523798840e3
 Voto: Tangerina  Hash Voto: f2b99001730c538a33c4b009da0b98af3ba3d3e2d8d7051b0ad6d523798840e3
 Voto: Tangerina  Hash Voto: f2b99001730c538a33c4b009da0b98af3ba3d3e2d8d7051b0ad6d523798840e3
+Voto: Tangerina  Hash Voto: f2b99001730c538a33c4b009da0b98af3ba3d3e2d8d7051b0ad6d523798840e3
+Voto: Mexerica  Hash Voto: 07d37f7b2246ccf17719579d62003cc83f6e1e4ad2b015b55a1d27e65f7bfb91
+Voto: Bergamota  Hash Voto: dab3e065b92a29d50f695f7e60a113fba5e08087c46cef7f06d1d0b0a2dd8f84
