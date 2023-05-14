@@ -26,7 +26,7 @@ O padrão de projeto utilizado foi o MVC, de tal forma que o *model* controlasse
 
 - Esse foi a organização do Model:
 
-![estrutura-base](imagens-projeto\UML-MVC1.png)
+![estrutura-base](imagens-projeto/ESTRUTURA-BASE-CLASSE.png)
 
 - Essa foi a organização do View:
 
