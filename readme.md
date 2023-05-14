@@ -26,17 +26,17 @@ O padrão de projeto utilizado foi o MVC, de tal forma que o *model* controlasse
 
 - Esse foi a organização do Model:
 
-![estrutura-base](imagens-projeto/ESTRUTURA-BASE-CLASSE.png)
+![estrutura-base](imagens-projeto/UML-MVC1.png)
 
 - Essa foi a organização do View:
 
-![estrutura-base](imagens-projeto\UML-MVC2.png)
+![estrutura-base](imagens-projeto/UML-MVC2.png)
 
 
 - Essa foi a organização do Controller:
 
 
-![estrutura-base](imagens-projeto\UML-MVC3.png)
+![estrutura-base](imagens-projeto/UML-MVC3.png)
 
 Inicialmente, a organização do controller possui 3 arquivos em formato de texto. Cada um deles possui um objetivo diferente.
 
@@ -52,7 +52,7 @@ Inicialmente, a organização do controller possui 3 arquivos em formato de text
 
 A organização geral do projeto no Netbeans se deu dessa forma:
 
-![estrutura-base](imagens-projeto\ESTRUTURA-BASE.png)
+![estrutura-base](imagens-projeto/ESTRUTURA-BASE.png)
 
 Acima, é possível ter uma visão geral da organização de classes e de todo o projeto.
 
@@ -64,16 +64,16 @@ Essa urna eletrônica é baseada em 3 telas.
 
 A execução do arquivo sempre deve começar pela classe "Tela do Eleitor", que é representada abaixo:
 
-![estrutura-base](imagens-projeto\TelaDoEleitor.png)
+![estrutura-base](imagens-projeto/TelaDoEleitor.png)
 
 Depois que o CPF for inserido, e passar por testes (será mencionado no próximo tópico), o usuário deve ir para a próxima tela, que é referente a votação. Essa tela contém o CPF do usuário, para trabalhar a responsabilidade e confiabilidade do sistema ao usuário utilizar ele. Para que o usuário vote, basta ele clicar no botão:
 
-![estrutura-base](imagens-projeto\TelaVotacao.png)
+![estrutura-base](imagens-projeto/TelaVotacao.png)
 
 Depois disso, o usuário vai para uma tela de confirmação, onde pode conferir os dados alocados (CPF e Candidato Votado) e clicar em um botão para que a próxima pessoa vote, e, consequentemente, fazer o sistema voltar para o ínicio:
 
 
-![estrutura-base](imagens-projeto\TelaConfirmacao.png)
+![estrutura-base](imagens-projeto/TelaConfirmacao.png)
 
 
 
@@ -89,7 +89,7 @@ Tendo isso em mente, existem dois casos problemáticos quando se trata da execu�
 
 Por isso, na tela de votação, ao clicar em "Inserir" existem dois processos de validação parra resolver exatamente esses problemas:
 
-![estrutura-base](imagens-projeto\ValidacaoCPF.png)
+![estrutura-base](imagens-projeto/ValidacaoCPF.png)
 
 Dessa forma, se os erros do usuário e de fraude não passam por essa camada de validação, o usuário consequentemente não pode votar.
 
@@ -109,7 +109,7 @@ Dessa forma, temos 3 arquivos txt:
 2) Um que armazena apenas votos e hash dos Votos
 3) Um que junta CPF e Voto em uma String, e gera um hash único baseado nisso.
 
-![estrutura-base](imagens-projeto\HASHES.png)
+![estrutura-base](imagens-projeto/HASHES.png)
 
 
 ## Criptografia
