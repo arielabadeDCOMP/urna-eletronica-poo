@@ -17,6 +17,7 @@ Enquanto a votação estiver aberta, os dados são inseridos pelo usuário, arma
 
 - Versão utilizadas: Java 20
 - IDE Utilizada: Netbeans
+- Framework: Java Swing utilizando JFrame
 - Membros da Equipe: Ariel Bandeira
 
 
